@@ -13,13 +13,13 @@ function handleClick() {
     if (!this.textContent) {
         this.textContent = currentPlayer;
         if (checkWinner()) {
-            message.textContent = `Гравець ${currentPlayer} переміг!`;
+            message.textContent = `Player ${currentPlayer} wone!`;
             cells.forEach(cell => {
                 cell.removeEventListener('click', handleClick);
             });
         } else {
             currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-            message.textContent = `Хід гравця: ${currentPlayer}`;
+            message.textContent = `Player's turn: ${currentPlayer}`;
         }
     }
 }
@@ -48,5 +48,5 @@ function restartGame() {
         cell.addEventListener('click', handleClick);
     });
     currentPlayer = 'X';
-    message.textContent = 'Почніть гру. Хід гравця: Х';
+    message.textContent = 'Start game. Player\'s turn: Х';
 }

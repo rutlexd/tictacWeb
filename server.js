@@ -17,6 +17,6 @@ app.get('/game.js', (req, res) => {
 app.use(express.static('public'));
 
 // Запускаємо сервер
-app.listen(port, '46.219.230.152', () => {
-    console.log(`Сервер запущений на http://46.219.230.152:${port}/`);
+app.listen(port, 'айпі', () => {
+    console.log(`Сервер запущений на http://айпі:${port}/`);
 });
